@@ -92,3 +92,24 @@ function doWeb(doc, url) {
     scrape(doc, url);
   }
 }
+
+function scrape(doc, url) {
+  item = new Zotero.Item("encyclopediaArticle");
+  item.title = ZU.trimInternal(doc.getElementById('firstHeading').textContent);
+  item.rights = text(doc, '#footer-info-copyright a');
+  item.language = doc.documentElement.lang; // check this: showing en for all, as en is written in html node, try to fix it.
+  item.archive = "Mediawiki";
+  var tags = doc.querySelectorAll('.mw-normal-catlinks ul li a');
+  if(tags.length)
+  {
+      for (var i=0; i<tags.length; i++) {
+  	    item.tags.push(tags[i].text);
+      }
+  }
+  item.attachments.push({
+      url : url,
+  	title : "Wikimedia Snapshot",
+  	type : "text/html"
+  });
+  item.complete();
+}

@@ -1,3 +1,17 @@
+{
+	"translatorID": "0b7904b6-8484-15d1-5fd3-9140a7efb3e9",
+	"label": "Haute autorité de santé",
+	"creator": "Alexandre BRULET",
+	"target": "^https:?//www\.has-sante\.fr",
+	"minVersion": "3.0",
+	"maxVersion": "",
+	"priority": 100,
+	"inRepository": true,
+	"translatorType": 4,
+	"browserSupport": "gcsibv",
+	"lastUpdated": "2020-03-21 12:49:21"
+}
+
 /*
   ***** BEGIN LICENSE BLOCK *****
 

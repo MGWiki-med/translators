@@ -78,7 +78,7 @@ function scrape(doc, _url) {
 		var secondDataText = secondData.textContent;
 
 		var trans = Zotero.loadTranslator('import');
-		trans.setTranslator('9cb70025-a888-4a29-a210-93ec52da40d4');// https://github.com/zotero/translators/blob/master/BibTeX.js
+		trans.setTranslator('9cb70025-a888-4a29-a210-93ec52da40d4');// https://github.com/MGWiki-med/translators/blob/master/BibTeX.js
 		trans.setString(secondDataText);
 
 		trans.setHandler('itemDone', function (obj, item) {
@@ -97,7 +97,7 @@ function scrapeMainPart(firstDataText, secondDataItem) {
 	// scrape from the firstDataText and if secondDataItem
 	// is not null, add/update these information
 	var trans = Zotero.loadTranslator('import');
-	trans.setTranslator('9cb70025-a888-4a29-a210-93ec52da40d4');// https://github.com/zotero/translators/blob/master/BibTeX.js
+	trans.setTranslator('9cb70025-a888-4a29-a210-93ec52da40d4');// https://github.com/MGWiki-med/translators/blob/master/BibTeX.js
 	trans.setString(firstDataText);
 
 	trans.setHandler('itemDone', function (obj, item) {

@@ -118,7 +118,7 @@ function scrapeRIS(doc, url) {
 				risData = risData.replace("TY  - GENERIC", "TY  - CHAP");
 			}
 			var trans = Zotero.loadTranslator('import');
-			trans.setTranslator('32d59d2d-b65a-4da4-b0a3-bdd3cfb979e7');//https://github.com/zotero/translators/blob/master/RIS.js
+			trans.setTranslator('32d59d2d-b65a-4da4-b0a3-bdd3cfb979e7');//https://github.com/MGWiki-med/translators/blob/master/RIS.js
 			trans.setString(risData);
 
 			trans.setHandler('itemDone', function (obj, item) {

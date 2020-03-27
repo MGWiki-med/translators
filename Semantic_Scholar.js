@@ -35,7 +35,7 @@
 	***** END LICENSE BLOCK *****
 */
 
-// See also https://github.com/zotero/translators/blob/master/BibTeX.js
+// See also https://github.com/MGWiki-med/translators/blob/master/BibTeX.js
 var bibtex2zoteroTypeMap = {
 	inproceedings: "conferencePaper",
 	conference: "conferencePaper",

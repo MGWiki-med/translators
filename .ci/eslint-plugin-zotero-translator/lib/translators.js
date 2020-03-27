@@ -172,7 +172,7 @@ class Cache {
 
 		const hasUpstream = exec('git remote -v').split('\n')
 			.map(line => line.trim())
-			.includes('upstream\thttps://github.com/zotero/translators.git');
+			.includes('upstream\thttps://github.com/MGWiki-med/translators.git');
 		// branch to compare lastUpdated against -- assume that if have upstream/master, you want to compare against that
 		const master = hasUpstream ? 'upstream/master' : 'master';
 

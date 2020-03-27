@@ -633,7 +633,7 @@ ItemFactory.prototype.saveItemCommonVars = function () {
 
 /*
   Test Case Descriptions:  (these have not been included in the test case JSON below as per 
-							aurimasv's comment on https://github.com/zotero/translators/pull/833)
+							aurimasv's comment on https://github.com/MGWiki-med/translators/pull/833)
 
 		"description": "Legacy test case",
 	"url": "http://scholar.google.com/scholar?q=marbury&hl=en&btnG=Search&as_sdt=1%2C22&as_sdtp=on",

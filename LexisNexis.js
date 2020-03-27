@@ -136,7 +136,7 @@ function scrape(doc, url) {
 			Z.debug(text);
 			
 			var trans = Zotero.loadTranslator('import');
-			trans.setTranslator('32d59d2d-b65a-4da4-b0a3-bdd3cfb979e7');//https://github.com/zotero/translators/blob/master/RIS.js
+			trans.setTranslator('32d59d2d-b65a-4da4-b0a3-bdd3cfb979e7');//https://github.com/MGWiki-med/translators/blob/master/RIS.js
 			trans.setString(text);
 
 			trans.setHandler('itemDone', function (obj, item) {

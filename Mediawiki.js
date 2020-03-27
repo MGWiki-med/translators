@@ -2,11 +2,11 @@
 	"translatorID": "8e0be5e2-0a52-57b9-3593-6fb3e50b7402",
 	"label": "Mediawiki",
 	"creator": "Alexandre BRULET",
-	"target": "^https:?//www\.mediawiki\.org/",
+	"target": "^https:?//www\\.mediawiki\\.org/",
 	"minVersion": "3.0",
 	"maxVersion": "",
 	"priority": 100,
-	"inRepository": true,
+	"inRepository": false,
 	"translatorType": 4,
 	"browserSupport": "gcsibv",
 	"lastUpdated": "2020-03-21 12:49:21"
@@ -56,7 +56,7 @@ function detectWeb(doc, url) {
   }
   // Adjust the inspection of url as required
   else if (url.indexOf('mediawiki.org/w') != -1){
-    return 'encyclopediaArticle';
+    return 'document';
   }
   // Add other cases if needed
 }
@@ -97,7 +97,7 @@ function doWeb(doc, url) {
 }
 
 function scrape(doc, url) {
-  item = new Zotero.Item("encyclopediaArticle");
+  var item = new Zotero.Item("document");
   item.title = ZU.trimInternal(doc.getElementById('firstHeading').textContent);
   item.rights = text(doc, '#footer-info-copyright a');
   item.language = doc.documentElement.lang; // check this: showing en for all, as en is written in html node, try to fix it.

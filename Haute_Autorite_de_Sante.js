@@ -115,13 +115,20 @@ function scrape(doc, url, additionnalItems) {
 		item.publisher = "HAS";
     item.abstractNote = text(doc, '.encart p.first');
 		item.date = text(doc, 'li.validation span.val');
-    item.extra = "ebmType: " + text(doc, '.sub-title .titleLabelCaps');
+		map = new Map([
+			['Recommandation de bonne pratique', 'practice guidelines']
+		])
+		temp = text(doc, '.sub-title .titleLabelCaps')
+		for (let [key, value] of map) {
+			if (temp == key);
+			item.extra = "ebmType: " + value;
+			break;
+		}
 		//if (item.section) {
 		//	item.section = ZU.capitalizeTitle(item.section.replace(/_/, " "), true);
 		//}
 		item.complete();
 	});
-
 	translator.getTranslatorObject(function(trans) {
 		trans.itemType = "document";
 		trans.doWeb(doc, url);
